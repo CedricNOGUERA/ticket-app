@@ -1,27 +1,54 @@
 import React from 'react'
 import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap'
+import '../../src/App.css';
 
 const Home = () => {
+
+
+    const step = [{
+        id: 1,
+        name: 'panier'
+        },
+        {
+        id: 2,
+        name: 'Coordonnées'
+        },
+        {
+        id: 3,
+        name: 'Paiement'
+        },
+        {
+        id: 4,
+        name: 'Confirmation'
+        }
+
+
+    ]
+
+
   return (
-    <Container fluid className="px-0 py-5  bg-light">
-      <Container className="bg-light shadow">
-        <Col className="m-auto" xs={12} md={6} lg={2}>
+    <Container fluid className="px-0 py-5 bg-light img-blur">
+      <Container className=" bg-light shadow">
+        <Col className="m-auto " xs={12} md={6} lg={2}>
           <Image fluid src="https://picsum.photos/650/850" alt="description" />
         </Col>
       </Container>
-      <Container className="bg-white shadow">
+      <Container className="bg-white shadow sticky">
         <Row className="py-2 justify-content-around border-bottom">
-          <Col className="m-auto text-center pb-2 pb-lg-0" xs={12} md={6} lg={2}>
-            <b className='fs-4'>
-            TAHITI 80
-            </b>
+          <Col
+            className="m-auto text-center pb-2 pb-lg-0"
+            xs={12}
+            md={6}
+            lg={2}
+          >
+            <b className="fs-4">TAHITI 80</b>
           </Col>
           <Col className="m-auto" xs={12} md={6} lg={2}>
-            <Button className='w-100'>Billeterie</Button>
+            <Button className="w-100">BIILETERIE</Button>
           </Col>
         </Row>
       </Container>
-      <Container className="bg-white border-top shadow">
+      <Container className="bg-white border-top shadow pb-5">
         <Row className="justify-content-around">
           <Col className="m-auto" xs={12} md={6} lg={8}>
             <h3 className="mt-3">Description</h3>
@@ -109,27 +136,37 @@ const Home = () => {
               L’aventure de Here With You peut alors commencer.
             </p>
             <Container>
-        <h3 className='mb-5'>Billeterie</h3>
-        <Row>
-            <Col className='text-center'>
-            <span className='text-center bg-primary rounded-circle text-white px-2 pb-1'>1</span>
-            <p className="text-primary">Panier</p>
-            </Col>
-            <Col className='text-center'>
-            <span className='text-center bg-primary rounded-circle text-white px-2 pb-1 pb-1'>2</span>
-            <p className="text-primary">Coordonnées</p>
-            </Col>
-            <Col className='text-center'>
-            <span className='text-center bg-primary rounded-circle text-white px-2 pb-1'>3</span>
-            <p className="text-primary">Paiement</p>
-            </Col>
-            <Col className='text-center'>
-            <span className='bg-primary rounded-circle text-white px-2 pb-1'>4</span>
-            <p className="text-primary">Confirmation</p>
-            </Col>
-        </Row>
-        <div className='border border-danger p-3 text-danger mb-5' >GOgo</div>
-      </Container>
+              <h3 className="mb-5">Billeterie</h3>
+              <Row className="w-100" style={{ fontSize: "0.7rem" }}>
+                <Col className="text-center">
+                  <span className="text-center bg-primary rounded-circle text-white px-2 py-1">
+                    1
+                  </span>
+                  <p className="text-primary py-2">Panier</p>
+                </Col>
+                <Col className="text-center">
+                  <span className="text-center border border-secondary text-secondary rounded-circle px-2 py-1">
+                    2
+                  </span>
+                  <p className="text-secondary  py-2">Coordonnées</p>
+                </Col>
+                <Col className="text-center">
+                  <span className="text-secondary border border-secondary text-secondary rounded-circle text-secondary px-2 py-1">
+                    3
+                  </span>
+                  <p className="text-secondary py-2">Paiement</p>
+                </Col>
+                <Col className="text-center">
+                  <span className="text-secondary border border-secondary text-secondary rounded-circle text-secondary px-2 py-1 ">
+                    4
+                  </span>
+                  <p className="text-secondary py-2">Confirmation</p>
+                </Col>
+              </Row>
+              <div className="border border-danger p-3 text-danger mb-5">
+                <b>Cet évèment est fini</b>
+              </div>
+            </Container>
           </Col>
           <Col className="mx-auto" xs={12} md={6} lg={3}>
             <Card className="my-3 bg-light border-0 ">
@@ -206,9 +243,26 @@ const Home = () => {
                 </Card.Link>
               </Card.Body>
             </Card>
+            <div className="text-center mb-2">
+              <b>Partager</b>
+            </div>
+            <div className="text-center mb-5">
+              <Image
+                src="https://img.icons8.com/ios/28/facebook-new.png"
+                alt="icon"
+              />
+              <Image
+                src="https://img.icons8.com/ios/28/twitter.png"
+                alt="icon"
+                className="text-primary mx-2"
+              />
+              <Image
+                src="https://img.icons8.com/ios/28/linkedin-circled.png"
+                alt="icon"
+              />
+            </div>
           </Col>
         </Row>
-                <div className='text-center' ><b>Partager</b></div>
       </Container>
     </Container>
   );

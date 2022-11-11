@@ -1,3 +1,8 @@
+.img-blur{
+  background: url('https://picsum.photos/1950/850') no-repeat 50% 0%;
+  height: 350px;
+}
+
 .App {
   text-align: center;
 }
