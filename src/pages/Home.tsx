@@ -32,6 +32,9 @@ const Home = () => {
         <Col className="m-auto " xs={12} md={6} lg={2}>
           <Image fluid src="https://picsum.photos/650/850" alt="description" />
         </Col>
+        <Col className="m-auto " xs={12} md={6} lg={2}>
+          <Image fluid src="https://picsum.photos/650/850" alt="description" />
+        </Col>
       </Container>
       <Container className="bg-white shadow sticky">
         <Row className="py-2 justify-content-around border-bottom">
